@@ -1,0 +1,251 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: #f4f4f4;
+  color: #222;
+}
+
+/* NAV */
+.navbar {
+  background: #111;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+}
+
+.logo {
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.logo span { color: red; }
+
+nav a {
+  color: #fff;
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+.call-btn {
+  background: red;
+  padding: 8px 12px;
+  border-radius: 4px;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 26px;
+  color: #fff;
+}
+
+/* HERO */
+.hero {
+  height: 80vh;
+  background: url("https://images.unsplash.com/photo-1503376780353-7e6692767b70") center/cover;
+  display: flex;
+  align-items: center;
+  padding: 40px;
+  color: #fff;
+}
+
+.hero-content {
+  max-width: 550px;
+}
+
+.hero h1 { font-size: 48px; }
+
+.btn {
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.primary {
+  background: red;
+  color: #fff;
+}
+
+.secondary {
+  border: 2px solid #fff;
+  background: transparent;
+  color: #fff;
+}
+
+/* TRUST */
+.trust {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background: #fff;
+  padding: 40px;
+}
+
+.trust-box {
+  text-align: center;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+  transition: transform 0.3s;
+}
+
+.trust-box:hover {
+  transform: translateY(-10px);
+}
+
+.trust-box i {
+  font-size: 32px;
+  color: red;
+  margin-bottom: 10px;
+}
+
+/* INVENTORY */
+.inventory {
+  padding: 40px;
+}
+
+.car-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.car-card {
+  background: #fff;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  transition: transform 0.3s;
+}
+
+.car-card:hover {
+  transform: translateY(-10px);
+}
+
+.car-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.price {
+  color: red;
+  font-weight: bold;
+}
+
+/* FINANCING */
+.financing {
+  background: #111;
+  color: #fff;
+  padding: 50px;
+}
+
+.finance-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.finance-form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+/* ABOUT */
+.about {
+  background: #fff;
+  padding: 50px;
+}
+
+.about-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 30px;
+}
+
+.owner img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+/* WHY */
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.why-card {
+  background: #f9f9f9;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+  transition: transform 0.3s;
+}
+
+.why-card:hover {
+  transform: translateY(-10px);
+}
+
+.why-card i {
+  font-size: 30px;
+  color: red;
+  margin-bottom: 10px;
+}
+
+/* TESTIMONIAL */
+.testimonials {
+  padding: 40px;
+  text-align: center;
+}
+
+/* FOOTER */
+footer {
+  background: #000;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .car-grid,
+  .trust,
+  .why-grid,
+  .finance-wrapper,
+  .about-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  nav {
+    display: none;
+    flex-direction: column;
+    background: #111;
+    position: absolute;
+    right: 0;
+    top: 60px;
+  }
+
+  nav a {
+    padding: 15px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
